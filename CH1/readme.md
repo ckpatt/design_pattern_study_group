@@ -30,5 +30,5 @@
 
 程式解說
 ---
-#### [UML 設計圖](https://app.diagrams.net/#G1-vKR46sCItbG-AlQojtEFMKqc4vDdaFy)
+#### [UML 設計圖]
 ![](https://i.imgur.com/I4WrrUe.png)
