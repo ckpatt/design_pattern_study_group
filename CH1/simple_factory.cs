@@ -1,4 +1,4 @@
-//本程式碼實踐簡單工廠模式
+//程式碼實踐簡單工廠模式
 //如上述舉例，去販賣機投飲料的範例
 class simple_factory {
     static void Main() {
@@ -6,8 +6,8 @@ class simple_factory {
         //依照使用者需求
         //實體化（販賣機掉出）相對應的物件（飲料）
         //可以想像成，使用者站在販賣機前面，按下奶茶or紅茶的按鈕
-        Drink red_tea_order =drinkFactory.CreateDrink("紅茶");
-        Drink milk_tea_order =drinkFactory.CreateDrink("奶茶");
+        Drink red_tea_order =DrinkFactory.CreateDrink("紅茶");
+        Drink milk_tea_order =DrinkFactory.CreateDrink("奶茶");
     
         red_tea_order.show_drink();
         milk_tea_order.show_drink();
@@ -22,7 +22,7 @@ class simple_factory {
     }
 
     //紅茶類別
-    class red_tea : Drink
+    class RedTea : Drink
     {
         private int drink_price=30;
         //複寫父類別的方法
@@ -33,7 +33,7 @@ class simple_factory {
     }
     
     //奶茶類別
-    class milk_tea : Drink
+    class MilkTea : Drink
     {
         private int drink_price=50;
 
@@ -45,7 +45,7 @@ class simple_factory {
 
 //工廠
 //注意命名內要有Factory
-class drinkFactory
+class DrinkFactory
     {
         //創立物件
         //static 函數宣告：讓在主程式中，不需要實體化物件就可以使用
@@ -58,10 +58,10 @@ class drinkFactory
             switch (oper)
             {
                 case "紅茶":
-                    obj = new red_tea();
+                    obj = new RedTea();
                     break;
                 case "奶茶":
-                    obj = new milk_tea();
+                    obj = new MilkTea();
                     break;              
             }
             return obj;
