@@ -30,5 +30,8 @@
 
 程式解說
 ---
-#### [UML 設計圖]
+### [UML 設計圖]
 ![](https://i.imgur.com/I4WrrUe.png)
+
+### 程式碼(可於LeetCode線上編譯器做測試)
+[SimpleFactory.cs](SimpleFactory.cs)
