@@ -113,7 +113,7 @@ CK 上週在設計新的智慧手機時，檢查著手機裡的記憶體，意�
 
 女友尾巴程式的架構圖如下，請指出哪裡未滿足 OCP 原則，以及如何修改呢？
 
-![](https://i.imgur.com/w3DPMLn.png)
+![](https://i.imgur.com/f06MsjS.png)
 
 討論
 ---
