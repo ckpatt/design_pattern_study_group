@@ -17,9 +17,9 @@
 
 範例
 ---
-- **JC今天口渴了，想要喝喝，阿~喝個奶茶好了 :+1:**
+- **JC今天口渴了，想要喝飲料解渴 :+1:**
 
-    ***依賴**：JC需要吸收液體 --> 解渴*
+    ***依賴**：JC需要喝飲料 --> 解渴*
     
     ```csharp=1
     class Program {
@@ -41,7 +41,7 @@
 
         public void drink()
         {
-            // 吸收液體
+            // 奶茶物件的method
             milktea.absorb();
         }
     }
@@ -59,7 +59,7 @@
     ```
     當JC (Caller)需要呼叫 `Milktea` 類別 (Callee)的實例時，這關係稱為 -- **依賴**
     
-- **哭阿 JC尻完奶茶後，突然想尻一杯shot讓自己嗨起來**
+- **某次，JC突然想改喝威士忌解渴(!?**
     ```csharp=1
     class Program {
       static void Main() {
@@ -82,8 +82,8 @@
 
         public void drink()
         {
-            // 吸收液體
             // milktea.absorb();
+			// 威士忌物件的method
             whisky.shot();
         }
     }
@@ -146,7 +146,7 @@
 
         public void drink()
         {
-            // 吸收液體
+            // 實作介面的method
             beverage.absorb();
         }
     }
@@ -191,7 +191,7 @@
 
 ## UML
 
-![](https://i.imgur.com/gIOI041.png =90%x)
+![](https://i.imgur.com/gIOI041.png)
 
 
  - 圖1中，高層物件`Person` 依賴於底層物件`Milktea` 與 `Whisky` 的實現；圖2中，把高層物件`Person` 對底層物件的需求抽象為一個介面 `IBeverage`，底層物件實現了介面，這就是依賴反轉。
@@ -199,8 +199,6 @@
     
 討論
 ---
-- 我覺得跟策略模式很像ㄟ，大家怎麼看??
-
 - 所以`依賴倒轉原則`的`倒轉` 是在倒什麼意思的?
   Ans: 原本的高階依賴低階 (JC依賴奶茶、威士忌)，使得JC的行為模式被奶茶、威士忌的實作方式綁死了；而飲料介面的出現，讓各種不同的飲料可以具體實作，進而讓關係變成：低階(飲料)依賴需求(介面)，而需求是高階模組(人)給的。
 
@@ -217,4 +215,3 @@
 > - [依賴倒轉原則 (Dependency Inversion Principle, DIP)](https://notfalse.net/1/dip)
 > - [介面(interface)、抽象( abstract)、虛擬(virtual)](https://medium.com/@ad57475747/c-%E9%9B%9C%E8%A8%98-%E4%BB%8B%E9%9D%A2-interface-%E6%8A%BD%E8%B1%A1-abstract-%E8%99%9B%E6%93%AC-virtual-%E4%B9%8B%E6%88%91%E8%A6%8B-dc3c5878bb80)
 > - [里氏替換原則 Liskov Substitution Principle (LSP)](https://medium.com/@f40507777/%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8F%9B%E5%8E%9F%E5%89%87-liskov-substitution-principle-adc1650ada53)
-> http://glj8989332.blogspot.com/2018/04/design-pattern-proxy-pattern.html

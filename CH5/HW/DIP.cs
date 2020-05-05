@@ -8,7 +8,7 @@ class DIP {
     }
 }
 
-interface IRamosGinFizz {a
+interface IRamosGinFizz {
 
     void makeRamosGinFizz();
 }
