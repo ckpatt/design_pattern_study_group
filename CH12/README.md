@@ -179,4 +179,4 @@ static void Main(string[] args)
 
 ![](https://i.imgur.com/56lhFnf.png)
 
-解答 ([GitHub]() / [repl.it](https://repl.it/@d4n1el/CH12))
+解答 ([GitHub](HW/FinancialAdvisor.cs) / [repl.it](https://repl.it/@d4n1el/CH12))
